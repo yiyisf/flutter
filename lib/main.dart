@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shenzhen/ui/Banner.dart';
+import 'package:shenzhen/ui/GridUi.dart';
 
 void main() {
   runApp(new MyApp());
@@ -13,7 +15,9 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: new MyHomePage(title: '深圳'),
+//      home: new MyHomePage(title: '深圳'),
+//    home: new Banners(),
+    home: new GridUi(),
     );
   }
 }
@@ -81,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //        ),
 //      ),
       body: new Container(
-//        child: new Center(
+        child: new Center(
             child: new Stack(
           children: <Widget>[
             new Banner(
@@ -104,6 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
               duration: const Duration(seconds: 1),
             ),
           ],
+        ),
         ),
 
 //          child: new AnimatedCrossFade(
