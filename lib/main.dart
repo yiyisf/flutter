@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shenzhen/ui/Badge.dart';
 import 'package:shenzhen/ui/Banner.dart';
 import 'package:shenzhen/ui/GridUi.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       ),
 //      home: new MyHomePage(title: '深圳'),
 //    home: new Banners(),
-    home: new GridUi(),
+//    home: new GridUi(),
+    home: new Badge(),
     );
   }
 }
