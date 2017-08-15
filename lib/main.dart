@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shenzhen/ui/Badge.dart';
 import 'package:shenzhen/ui/Banner.dart';
+import 'package:shenzhen/ui/Carousel.dart';
 import 'package:shenzhen/ui/CircleImage.dart';
 import 'package:shenzhen/ui/GridUi.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
 //    home: new Banners(),
 //    home: new GridUi(),
 //    home: new Badge(),
-    home: new CircleImage(),
+//    home: new CircleImage(),
+    home: new Carousel(),
     );
   }
 }
