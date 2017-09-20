@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/**
+ * 轮播图片
+ */
 class Carousel extends StatefulWidget {
   @override
   _CarouselState createState() => new _CarouselState();
@@ -14,7 +17,7 @@ class _CarouselState extends State<Carousel> {
           length: 3,
           child: new _PageSelector(),
         ),
-      height: 200.00,
+        height: 200.00,
       )
     );
   }
@@ -49,29 +52,6 @@ class _PageSelector extends StatelessWidget {
         new TabPageSelector(
           controller: controller,
         selectedColor: Colors.white,
-        ),
-        new Container(
-          padding: const EdgeInsets.all(16.0),
-          child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              new IconButton(
-                  icon: const Icon(Icons.chevron_left, size: 32.0,),
-                  color: color,
-                  onPressed: () {
-                    _handleArrowButtonPress(context, -1);
-                  },
-                  tooltip: 'Page back'),
-              new IconButton(
-                  icon: const Icon(Icons.chevron_right, size: 32.0,),
-                  color: color,
-                  onPressed: () {
-                    _handleArrowButtonPress(context, 1);
-                  },
-                  tooltip: 'Page forward')
-            ],
-          ),
         ),
 //        new TabBarView(
 //          children: _list.map((s){

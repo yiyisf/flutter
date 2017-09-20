@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.grey,
       ),
-//      home: new MyHomePage(title: '深圳'),
+      home: new MyHomePage(title: '深圳'),
 //    home: new Banners(),
 //    home: new GridUi(),
 //    home: new Badge(),
 //    home: new CircleImage(),
-    home: new Carousel(),
+//    home: new Carousel(),
     );
   }
 }
@@ -91,11 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
 //        ),
 //      ),
       body: new Container(
-        child: new Center(
-            child: new Stack(
+        height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+//        child: new Center(
+        child: new Stack(
           children: <Widget>[
             new Banner(
-              location: BannerLocation.topLeft,
+              location: BannerLocation.topStart,
               message: "Test",
               color: Colors.yellow,
             ),
@@ -114,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
               duration: const Duration(seconds: 1),
             ),
           ],
-        ),
+//        ),
         ),
 
 //          child: new AnimatedCrossFade(
@@ -125,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //          ),
 //            ),
         decoration: new BoxDecoration(
-          //线性颜色
+        //线性颜色
 //          gradient: new LinearGradient(
 //            begin: FractionalOffset.topRight,
 //            end: FractionalOffset.bottomLeft,
