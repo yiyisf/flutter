@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: new MyHomePage(title: '深圳'),
+//      home: new MyHomePage(title: '深圳'),
 //    home: new Banners(),
-//    home: new GridUi(),
+    home: new GridUi(),
 //    home: new Badge(),
 //    home: new CircleImage(),
 //    home: new Carousel(),

@@ -20,7 +20,17 @@ class _GridUiState extends State<GridUi> {
     "FF",
     "FF",
     "GG",
-    "GG",
+  ];
+
+  List<IconData> _icons = [
+    Icons.access_alarm,
+    Icons.phone_android,
+    Icons.account_balance_wallet,
+    Icons.all_out,
+    Icons.zoom_out,
+    Icons.wifi,
+    Icons.whatshot,
+    Icons.gps_off
     ];
 
   @override
@@ -36,20 +46,35 @@ class _GridUiState extends State<GridUi> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          new GridTileBar(
-            title: const Text("TITLE"),
-            subtitle: const Text("SUB title"),
-          ),
-          new Expanded(
-            child: new GridView.count(
-              primary: false,
-            crossAxisCount: 3,
-              mainAxisSpacing: 2.0,
-              crossAxisSpacing: 2.0,
-            children: _listItem.map((item){
-                return new InkWell(child: new Center(child: new Text(item),));
-            }).toList(),
+          children: <Widget>[
+            new GridTileBar(
+              title: const Text("TITLE"),
+              subtitle: const Text("SUB title"),
+            ),
+            new Expanded(
+              child: new GridView.count(
+                primary: false,
+                crossAxisCount: 4,
+                mainAxisSpacing: 10.0,
+                crossAxisSpacing: 20.0,
+                children: _icons.map((item) {
+                  return new FloatingActionButton(child: new Icon(item, size: 45.0,),
+                    onPressed: () {},
+                    backgroundColor: Colors.lightBlue,
+//                  mini: true,
+                  );
+//                  return new FlatButton(onPressed: () {},
+//                      child: new Text(item),
+//                      color: Colors.red);
+//                  return new InkWell(
+//                    child: new Center(child: new Text(item),),
+//                    borderRadius: new BorderRadius.all(
+//                        new Radius.circular(2.0)),
+//                    onTap: () {
+//                      print(item);
+//                    },
+//                  );
+                }).toList(),
 //            children: <Widget>[
 //
 ////              new InkResponse(child: new Center(child: const Text("AA"),),onTap: (){}, splashColor: Colors.orange,),
@@ -80,8 +105,8 @@ class _GridUiState extends State<GridUi> {
 ////              new Center(child: const Text("GG"),),
 ////              new Center(child: const Text("GG"),),
 //              ],
+              ),
             ),
-          ),
           ],
         ),
         decoration: new BoxDecoration(
